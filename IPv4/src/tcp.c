@@ -40,3 +40,13 @@ unsigned short checksum(const char *buf, unsigned size)
 	return ~sum;
 }
 
+void createTCPPacket ( unsigned char *buf, unsigned size ) {
+
+	unsigned short iphdrlen;
+
+	struct iphdr *iph = (struct iphdr *)buf;
+	iphdrlen = iph->ihl*4;
+
+	struct tcphdr *tcph=(struct tcphdr*)(buf + iphdrlen);
+}
+
