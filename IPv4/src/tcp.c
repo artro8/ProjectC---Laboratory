@@ -62,6 +62,26 @@ void createTCPPacket ( unsigned char *buf, unsigned size ) {
 				tcph->th_sport = 0;	//TCP source
 			else
 				tcph->th_sport = atoi (input);
+	printf ("\nTCP destination port (0): ");
+		fgets (input, 32, stdin);
+			if (atoi(input)== 0)
+				tcph->th_dport = 0;	//TCP destination
+			else
+				tcph->th_dport = atoi (input);
+	printf ("\nTCP sequence number (0): ");
+		fgets (input, 32, stdin);
+			if (atoi(input)== 0)
+				tcph->th_seq = 0;	//TCP sequence
+			else
+				tcph->th_seq = atoi (input);
+	printf("\nTCP ACK (0);");
+		fgets(input, 32, stdin);
+			if (atoi(input)== 0)
+				tcph->th_ack = 0;	//TCP ack
+			else
+				tcph->th_ack = atoi (input);
+
+
 	//Dalej....
 
 	printf ("\nTCP checksum will be calcuated... \n");
