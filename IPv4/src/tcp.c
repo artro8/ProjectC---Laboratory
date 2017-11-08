@@ -81,7 +81,6 @@ void createTCPPacket ( unsigned char *buf, unsigned size ) {
 			else
 				tcph->th_ack = atoi (input);
 
-
 	//Dalej....
 
 	printf ("\nTCP checksum will be calcuated... \n");

@@ -10,6 +10,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "program.h"
+#include <dlfcn.h>
+#include <netinet/in.h>
 
 int main(void) {
 	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
