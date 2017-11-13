@@ -80,6 +80,30 @@ void createTCPPacket ( unsigned char *buf, unsigned size ) {
 				tcph->th_ack = 0;	//TCP ack
 			else
 				tcph->th_ack = atoi (input);
+			printf("\nTCP x2 (0);");
+					fgets(input, 32, stdin);
+						if (atoi(input)== 0)
+							tcph->th_x2 = 0;	//TCP x2
+						else
+							tcph->th_x2 = atoi (input);
+				printf("\nTCP off (0);");
+					fgets(input, 32, stdin);
+						if (atoi(input)== 0)
+							tcph->th_off = 0;	//TCP off
+						else
+							tcph->th_off = atoi (input);
+			    printf("\nTCP win (0);");
+					fgets(input, 32, stdin);
+						if (atoi(input)== 0)
+							tcph->th_win = 0;	//TCP win
+						else
+							tcph->th_win = atoi (input);
+				printf("\nTCP urp (0);");
+					fgets(input, 32, stdin);
+						if (atoi(input)== 0)
+							tcph->th_urp = 0;	//TCP urp
+						else
+							tcph->th_urp = atoi (input);
 
 	//Dalej....
 
