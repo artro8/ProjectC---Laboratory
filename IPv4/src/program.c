@@ -33,10 +33,10 @@ void * LoadIpv4 (){
 
 }
 
-//function to load ICMP library
+//function to load TCP library
 void * LoadTCP (){
 
-	void *TCPLib = malloc ( sizeof (void ) );	//handle to ICMP lib
+	void *TCPLib = malloc ( sizeof (void ) );	//handle to TCP lib
 
 	TCPLib = dlopen("./tcp.so", RTLD_LAZY);
 		if (!TCPLib)
@@ -109,7 +109,7 @@ int Menu ( int *count, char *interface ) {
 	printf ("\033[H\033[J");	//cleans console
 	printf ("Welcome to sender. What do you want to do: \n");
 	printf ("[1] Send IPv4 packet \n");
-	printf ("[2] Send ICMP packet \n");
+	printf ("[2] Send TCP packet \n");
 
 	fgets ( input, 32, stdin );	//get type of operation
 	result = atoi (input);
